@@ -22,11 +22,24 @@ const svg = d3.select(".fins-diagram-container")
         .style("border", "1px solid black");
 
 const CreateLineChart = (data) => {
-    let yearsOfTrading = getYearsOfTrading(data);
+    const yearsOfTrading = getYearsOfTrading(data);
+    const domain = d3.extent(yearsOfTrading);
+
+    let scale = d3.scaleLinear()
+        .domain(domain)
+        .range([0, 200]);
+
+    // Add scales to axis
+    let x_axis = d3.axisBottom()
+        .scale(scale);
+
+    //Append group and insert axis
+    svg.append("g")
+        .call(x_axis);
 }
 
 const getYearsOfTrading = (data) => {
-    let years   = [];
+    let years = [];
 
     const dateParse  = d3.timeParse("%d/%m/%Y");
     const dateFormat = d3.timeFormat("%Y");
