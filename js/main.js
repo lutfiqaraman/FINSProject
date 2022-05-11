@@ -18,8 +18,7 @@ d3
 
 const svg = d3.select(".fins-diagram-container")
     .append("svg")
-        .attr("viewBox", "0 0 600 700")
-        .style("border", "1px solid black");
+        .attr("viewBox", "0 0 600 700");
 
 const CreateLineChart = (data) => {
     const yearsOfTrading = getYearsOfTrading(data);
