@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>FINS Diagram</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -22,35 +21,58 @@
         </div>
     </div>
 
-    <div class="d-flex justify-content-between mt-5">
-        <div>
-            <nav class="navbar navbar-expand-sm justify-content-between">
-                <div class="navbar-nav justify-content-center">
-                    <span class="p-1">Zoom</span>
-                    <a class="p-1 nav-item nav-link" href="#">10D</a>
-                    <a class="p-1 nav-item nav-link" href="#">1M</a>
-                    <a class="p-1 nav-item nav-link" href="#">3M</a>
-                    <a class="p-1 nav-item nav-link" href="#">6M</a>
-                    <a class="p-1 nav-item nav-link" href="#">1Y</a>
-                    <a class="p-1 nav-item nav-link" href="#">2Y</a>
-                    <a class="p-1 nav-item nav-link" href="#">All</a>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-between mt-5 mb-5">
+                <div>
+                    <ul class="justify-content-center list-inline">
+                        <li class="list-inline-item">Zoom </li>
+                        <li class="list-inline-item">
+                            <a href="#">10D</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">1M</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">3M</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">6M</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">1Y</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">2Y</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">All</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
+                <div>
+                    <label for="dateFrom">From</label>
+                    <input type="text" name="dateFrom" id="dateFrom">
 
-        </div>
-        <div>
-            <label for="dateFrom">From</label>
-            <input type="text" name="dateFrom" id="dateFrom">
-
-            <label for="dateTo">To</label>
-            <input type="text" name="dateTo" id="dateTo">
+                    <label for="dateTo">To</label>
+                    <input type="text" name="dateTo" id="dateTo">
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="fins_line_chart_container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="fins_line_chart_container">
+            </div>
+        </div>
     </div>
 
-    <div class="col-md-12 mt-3 fins_histogram_chart_container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-12 mt-3 fins_histogram_chart_container">
+            </div>
+        </div>
     </div>
 
 </div>
